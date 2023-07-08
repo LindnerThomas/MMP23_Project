@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 3143983093
+    locked: 0
+  - name: Flowers
+    uniqueID: 4195471105
+    locked: 0
+  - name: Player
+    uniqueID: 3679489501
+    locked: 0
+  - name: UI
+    uniqueID: 1902413787
+    locked: 0
