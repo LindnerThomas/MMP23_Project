@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FlowerShop.unity
     guid: ff67f1bb56bc8d64fbb660ca575f6d6c
+  - enabled: 1
+    path: Assets/Scenes/Workbench.unity
+    guid: bdd33ce543c2c8a4c8f7f134b79ec1a0
+  - enabled: 1
+    path: Assets/Scenes/Garden.unity
+    guid: 9f86eaffec0efb84d90215afc30d81fe
   m_configObjects: {}
