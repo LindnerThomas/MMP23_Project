@@ -32,6 +32,7 @@ public class MainMenu : MonoBehaviour
    }
 
    public void QuitGame(){
+        audioSource.Play();
         Application.Quit();
         Debug.Log("Quit works");
    }

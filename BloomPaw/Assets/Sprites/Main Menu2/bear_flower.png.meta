@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2c7f717992145f4da683369dd761f0f
+guid: 284ecb5fea5af40408ae1ab3924f93c5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking_withflower_0
+      name: bear_flower_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5a5c82e5d395fd4db0c09984cd38960
-      internalID: 1576385289
+      spriteID: 92bcfbf5407f7f449afdb2bd487021a4
+      internalID: 273400416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_withflower_1
+      name: bear_flower_1
       rect:
         serializedVersion: 2
         x: 16
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e7c02a35e097474f97b83ed40e41d68
-      internalID: -324328981
+      spriteID: 724ab22d2a45a944c84a8991cbdb663f
+      internalID: -544616375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_withflower_2
+      name: bear_flower_2
       rect:
         serializedVersion: 2
         x: 32
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92a9469ff9720e644a621847429cea8c
-      internalID: -1868209974
+      spriteID: 398adccc7a1d105408cb278bd9760093
+      internalID: -1040355635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_withflower_3
+      name: bear_flower_3
       rect:
         serializedVersion: 2
         x: 48
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65bc7b5398057854c80b7dd2fcb60f05
-      internalID: -1337718540
+      spriteID: 437a694923bb9b74b8b5639333491b52
+      internalID: 141988770
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walking_withflower_0: 1576385289
-      walking_withflower_1: -324328981
-      walking_withflower_2: -1868209974
-      walking_withflower_3: -1337718540
+      bear_flower_0: 273400416
+      bear_flower_1: -544616375
+      bear_flower_2: -1040355635
+      bear_flower_3: 141988770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

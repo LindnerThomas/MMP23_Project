@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Walking-withflower
+  m_Name: bear-with-flower
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1576385289, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
+      value: {fileID: 273400416, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
     - time: 0.083333336
-      value: {fileID: -324328981, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
+      value: {fileID: -544616375, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
     - time: 0.16666667
-      value: {fileID: -1868209974, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
+      value: {fileID: -1040355635, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
     - time: 0.25
-      value: {fileID: -1337718540, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
+      value: {fileID: 141988770, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1576385289, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
-    - {fileID: -324328981, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
-    - {fileID: -1868209974, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
-    - {fileID: -1337718540, guid: c2c7f717992145f4da683369dd761f0f, type: 3}
+    - {fileID: 273400416, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
+    - {fileID: -544616375, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
+    - {fileID: -1040355635, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
+    - {fileID: 141988770, guid: 284ecb5fea5af40408ae1ab3924f93c5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
