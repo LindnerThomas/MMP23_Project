@@ -15,8 +15,9 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     Vector2 oldPosition;
     public TMP_Text text;
     int layerMask = 1 << 5;
-    
-    
+    public DNDOrder order;
+
+
     public void OnPointerDown(PointerEventData eventData)
     {
         int clickID = eventData.pointerId;
@@ -55,8 +56,9 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (hit.collider != null)
         {
             Debug.Log("hit:" + hit.collider.name);
-            if (hit.collider.name == "PostItContainer")
+            if (hit.collider.name == "Packpapier")
             {
+                order.startEvent();
                 text = hit.collider.gameObject.GetComponentInChildren<TMP_Text>();
                 text.text = "" + name;
             }
@@ -87,9 +89,10 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         oldPosition = transform.localPosition;
+        print(oldPosition);
     }
 
 

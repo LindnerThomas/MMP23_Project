@@ -14,7 +14,7 @@ public class AssemblyMiniGame : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     Vector2 oldPosition;
     int RangefieldLayerMask = 1 << 7;
     int CheckpointLayerMask = 1 << 6;
-    bool TaskActive = true;
+    //bool TaskActive = true;
     int StepCounter = 0;
     public GameObject Paper;
     public Sprite[] sprite1;
@@ -114,9 +114,8 @@ public class AssemblyMiniGame : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         }
         if (StepCounter == sprite1.Length)
         {
-            TaskActive = false;
+            //TaskActive = false;
             order.startEvent();
-            this.transform.parent.gameObject.SetActive(false);
         }
     }
 }
