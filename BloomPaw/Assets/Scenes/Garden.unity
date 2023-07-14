@@ -734,7 +734,7 @@ Canvas:
   m_GameObject: {fileID: 457305164}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -745,7 +745,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1274492855
+  m_SortingLayerID: 1902413787
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &457305168

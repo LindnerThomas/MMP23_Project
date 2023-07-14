@@ -65,7 +65,10 @@ public class AssemblyMiniGame : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         RaycastHit2D Hit = Physics2D.Raycast(transform.position, Vector2.zero, Mathf.Infinity, RangefieldLayerMask);
         if (Hit.collider != null) { DraggedMode(); }
-        else { StillMode(); }
+        else
+        {
+            StillMode();
+        }
     }
 
     void CheckforCheckpoint()
@@ -84,7 +87,7 @@ public class AssemblyMiniGame : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     // Transformation of object while dragged
     void DraggedMode()
     {
-        transform.position = Input.mousePosition;
+        this.transform.localPosition = new Vector2(Input.mousePosition.x / GetComponentInParent<Canvas>().scaleFactor - 120, Input.mousePosition.y / GetComponentInParent<Canvas>().scaleFactor -70);
     }
 
     // Default transformation before drag

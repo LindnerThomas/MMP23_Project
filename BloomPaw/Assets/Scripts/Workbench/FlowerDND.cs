@@ -75,7 +75,10 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     // Transformation of object while dragged
     void DraggedMode()
     {
-        this.transform.position = Input.mousePosition;
+        //Vector2 mousePos = Camera.main.ScreenTo(Input.mousePosition);
+        //mousePos -= new Vector2(0.5f, 0.5f) * 10;
+        print("x: "+Input.mousePosition.x / GetComponentInParent<Canvas>().scaleFactor + " y: " + Input.mousePosition.y / GetComponentInParent<Canvas>().scaleFactor);
+        this.transform.localPosition = new Vector2(Input.mousePosition.x / GetComponentInParent<Canvas>().scaleFactor - 120, Input.mousePosition.y / GetComponentInParent<Canvas>().scaleFactor );
         this.transform.localScale = (new Vector2 (1,1) / 7 * 6);
     }
 
