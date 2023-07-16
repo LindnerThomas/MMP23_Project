@@ -6,12 +6,4 @@ using UnityEngine;
 public class InventoryItem : ScriptableObject{
     public int flowerCount = 3;
 
-    public void addCount(){
-        flowerCount++;
-    }
-
-    public void decreaseCount(){
-        flowerCount--;
-    }
-
 }
