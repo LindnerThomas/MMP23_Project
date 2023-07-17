@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4dfc1b11e864345a56d342b24b071f, type: 3}
   m_Name: Flower1
   m_EditorClassIdentifier: 
-  flowerCount: 1
+  flowerCount: 0

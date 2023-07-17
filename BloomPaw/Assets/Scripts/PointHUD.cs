@@ -12,7 +12,9 @@ public class PointHUD : MonoBehaviour
 
     private void Awake() {
         UpdateHUD();
+        
     }
+
 
     public int Points {
         get {
