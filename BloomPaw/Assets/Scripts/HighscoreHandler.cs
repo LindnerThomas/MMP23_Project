@@ -4,48 +4,33 @@ using UnityEngine;
 
 public class HighscoreHandler : MonoBehaviour
 {
-    List<InputEntry> highscoreList = new List<InputEntry>();
-    [SerializeField] int maxCount = 7;
-    [SerializeField] string filename;
+    [SerializeField] HighscoreUI highscoreUI;
 
-    public delegate void OnHighscoreListChanged (List<InputEntry> list);
-    public static event OnHighscoreListChanged onHighscoreListChanged;
+    int highscore;
+    
+    public int Highscore {
+        set {
+            highscore = value;
+            highscoreUI.SetHighscore(value);
+        }
+    }
 
     private void Start() {
-        LoadHighscore();
+        SetLatestHighscore();
     }
-    private void LoadHighscore() {
-        highscoreList= FileHandler.ReadFromJSON<InputEntry>(filename);
 
-        while(highscoreList.Count > maxCount) {
-            highscoreList.RemoveAt(maxCount);
-        }
-
-        if (onHighscoreListChanged != null){
-            onHighscoreListChanged.Invoke(highscoreList);
-        }
-
+    private void SetLatestHighscore() {
+        Highscore = PlayerPrefs.GetInt("Highscore", 0);
 
     }
-    private void SaveHighscore() {
-        FileHandler.SaveToJSON<InputEntry>(highscoreList, filename);
-        
+    private void SaveHighscore(int score) {
+        PlayerPrefs.SetInt("Highscore", score);
     }
-    public void AddHighscoreIfPossible(InputEntry element) {
-        for(int i = 0; i < maxCount; i++) {
-            if( i >= highscoreList.Count || element.score > highscoreList[i].score){
-                highscoreList.Insert(i, element);
-                
-                while(highscoreList.Count > maxCount) {
-                    highscoreList.RemoveAt(maxCount);
-                }
 
-                SaveHighscore();
-                if (onHighscoreListChanged != null){
-                    onHighscoreListChanged.Invoke(highscoreList);
-                }
-                break;
-            }
+    public void SetHighscoreIfGreater(int score) {
+        if(score > highscore) {
+            Highscore = score;
+            SaveHighscore(score);
         }
     }
 }

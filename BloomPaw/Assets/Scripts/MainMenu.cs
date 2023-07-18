@@ -17,12 +17,14 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(_PlayGame());
     }
 
-   public void GoBack(){
-      audioSource.Play();
-      StartCoroutine(_GoBack());
-   }
- 
-   private IEnumerator _PlayGame(){
+    public void GoBack()
+    {
+        audioSource.Play();
+        StartCoroutine(_GoBack());
+    }
+
+    private IEnumerator _PlayGame()
+    {
         yield return new WaitForSeconds(audio.length);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
