@@ -13,6 +13,7 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     bool dragged = false;
     Vector2 oldPosition;
+    public TMP_Text text;
     int layerMask = 1 << 5;
     public DNDOrder order;
 
@@ -55,12 +56,11 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (hit.collider != null)
         {
             Debug.Log("hit:" + hit.collider.name);
-            if (hit.collider.name == "Circle")
+            if (hit.collider.name == "Packpapier")
             {
-                FlowerChanger flower = hit.collider.gameObject.GetComponentInChildren<FlowerChanger>();
-                flower.changeFlower(this.GetComponentInChildren<UnityEngine.UI.Image>().sprite);
                 order.startEvent();
-
+                text = hit.collider.gameObject.GetComponentInChildren<TMP_Text>();
+                text.text = "" + name;
             }
         }
     }
@@ -75,6 +75,8 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     // Transformation of object while dragged
     void DraggedMode()
     {
+        //Vector2 mousePos = Camera.main.ScreenTo(Input.mousePosition);
+        //mousePos -= new Vector2(0.5f, 0.5f) * 10;
         print("x: "+Input.mousePosition.x / GetComponentInParent<Canvas>().scaleFactor + " y: " + Input.mousePosition.y / GetComponentInParent<Canvas>().scaleFactor);
         this.transform.localPosition = new Vector2(Input.mousePosition.x / GetComponentInParent<Canvas>().scaleFactor - 120, Input.mousePosition.y / GetComponentInParent<Canvas>().scaleFactor );
         this.transform.localScale = (new Vector2 (1,1) / 7 * 6);
