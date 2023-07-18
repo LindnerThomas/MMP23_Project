@@ -15,7 +15,8 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     Vector2 oldPosition;
     int layerMask = 1 << 5;
     public DNDOrder order;
-
+    public int flowerID;
+    public Sprite[] flowerSprite;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -55,13 +56,35 @@ public class FlowerDND : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (hit.collider != null)
         {
             Debug.Log("hit:" + hit.collider.name);
-            if (hit.collider.name == "Circle")
+            if (hit.collider.name == "Circle1")
             {
-                FlowerChanger flower = hit.collider.gameObject.GetComponentInChildren<FlowerChanger>();
-                flower.changeFlower(this.GetComponentInChildren<UnityEngine.UI.Image>().sprite);
-                order.startEvent();
+                GameObject flower = GameObject.Find("Flower1");
 
+                foreach (Transform child in flower.transform)
+                {
+                    child.GetComponent<SpriteRenderer>().sprite = flowerSprite[flowerID - 1];
+                }
             }
+            if (hit.collider.name == "Circle2")
+            {
+                GameObject flower = GameObject.Find("Flower2");
+
+                foreach (Transform child in flower.transform)
+                {
+                    child.GetComponent<SpriteRenderer>().sprite = flowerSprite[flowerID - 1];
+                }
+            }
+            if (hit.collider.name == "Circle3")
+            {
+                GameObject flower = GameObject.Find("Flower3");
+
+                foreach (Transform child in flower.transform)
+                {
+                    child.GetComponent<SpriteRenderer>().sprite = flowerSprite[flowerID - 1];
+                }
+            }
+            order.startEvent();
+
         }
     }
     
